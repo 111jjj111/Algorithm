@@ -1,5 +1,5 @@
 n,m = map(int,input().split())
-
+result = 0
 picture = [[0 for _ in range(100)] for _ in range(100)]
 
 for i in range(n):
@@ -9,10 +9,10 @@ for i in range(n):
     for k in range(y1 - 1,y2):
       picture[j][k] += 1
 
-  result = 0
-  for j in range(100):
-    for k in range(100):
-      if picture[j][k] > m:
-        result += 1
+  
 
+for j in range(100):
+  for k in range(100):
+    if picture[j][k] > m:
+      result += 1
 print(result)
